@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-0.8.1.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+<body>
+  <section>
+    <article>
+      <table>
+        <thead>
+          <tr>
+            <th>Servi&ccedil;os</th>
+            <th>Empresa</th>
+            <th>Contato</th>
+            <th>Atualizado em</th>
+          </tr>
+        </thead>
+        <tbody id="corpo">
+          <!--<tr>
+            <td>Material de limpeza</td>
+            <td>Arte produtos de limpeza</td>
+            <td>99918-9185</td>
+            <td>06/05/2017</td>
+          </tr>-->
+        </tbody>
+      </table>
+      <script src="alvo.js"></script>
+      <form action="javascript:void(0);" method="POST" onsubmit="app.addrow()">
+        <input type="text" style="width:65%" id="add-row" maxlength="300">
+        <input type="submit" value="Adicionar">
+	  </form>
+		<div id="spoiler" role="aria-hidden">
+		  <form action="javascript:void(0);" method="POST" id="saveEdit">
+		    <input type="text" style="width:65%" id="edit-row" maxlength="300">
+			<input type="submit" value="Edit" />
+			<a onclick="closeInput()" aria-label="Close">&#10006;</a>
+		  </form>
+		</div>
+    </article>
+  </section>
+</body>
+</html>
