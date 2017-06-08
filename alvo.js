@@ -3,7 +3,7 @@ var closeInput = function () {
 }
 var app = {
 	el : document.getElementById('corpo'),
-	rows : [[]],
+	rows : [],
 	fetchAll : function() {
 		var data = '';
 		if (this.rows.length > 0) {
