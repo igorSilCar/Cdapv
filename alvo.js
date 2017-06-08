@@ -1,9 +1,9 @@
-function closeInput() {
+var closeInput = function () {
 	document.getElementById('spoiler').style.display = 'none';
 }
 var app = {
 	el : document.getElementById('corpo'),
-	rows : [['coisa','coisa','coisa','coisa']],
+	rows : [[]],
 	fetchAll : function() {
 		var data = '';
 		if (this.rows.length > 0) {
@@ -27,7 +27,6 @@ var app = {
 		elem.value = '';
 	},
 	edit : function (item) {
-		//alert(item);
 		var elem = document.getElementById('edit-row');
 		elem.value = this.rows[item];
 		document.getElementById('spoiler').style.display = 'block';
@@ -46,13 +45,5 @@ var app = {
 		this.fetchAll();
 	}
 };
-
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-    if (xhr.readyState == XMLHttpRequest.DONE) {
-        alert(xhr.responseText);
-    }
-}
-xhr.open('GET', 'data', true)
 
 app.fetchAll();
