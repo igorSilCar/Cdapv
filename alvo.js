@@ -13,6 +13,7 @@ var app = {
 					data += '<td>' + this.rows[i][j] + '</td>';
 				}
 				data += '<td><button onclick="app.edit(' + i + ')">Alterar</button></td>';
+				data += '<td><button onclick="app.del(' + i + ')">Excluir</button></td>';
 				data += '</tr>';
 			}
 		}
@@ -39,6 +40,10 @@ var app = {
 				closeInput();
 			}
 		}
+	},
+	del : function (item) {
+		this.rows.splice(item, 1);
+		this.fetchAll();
 	}
 };
 
