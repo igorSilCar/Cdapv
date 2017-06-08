@@ -3,7 +3,7 @@ function closeInput() {
 }
 var app = {
 	el : document.getElementById('corpo'),
-	rows : [],
+	rows : [['coisa','coisa','coisa','coisa']],
 	fetchAll : function() {
 		var data = '';
 		if (this.rows.length > 0) {
@@ -46,5 +46,13 @@ var app = {
 		this.fetchAll();
 	}
 };
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+        alert(xhr.responseText);
+    }
+}
+xhr.open('GET', 'data', true)
 
 app.fetchAll();
