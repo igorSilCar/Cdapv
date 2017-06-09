@@ -3,7 +3,12 @@ var closeInput = function () {
 }
 var app = {
 	el : document.getElementById('corpo'),
-	rows : [],
+	rows : [
+		['Limpeza e copa', 'Arte Prod. Limpeza', '3385-8177', '09/06/2017'],
+		['Manut. contadoras', 'Centaurus', '3039-5917', '09/06/2017'],
+		['Carimbos', 'HBL', '3226-6751 ou hblcarimbos@gmail.com', '09/06/2017'],
+		['Chaveiro', 'Alves', '3223-9690 ou 98405-9690', '09/06/2017']
+		],
 	fetchAll : function() {
 		var data = '';
 		if (this.rows.length > 0) {
